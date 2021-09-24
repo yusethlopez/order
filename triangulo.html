@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css//style.css">
+    <link rel="stylesheet" href="./css//styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
@@ -18,22 +18,24 @@
         </header>
         <main>
           <h1> Calculadora de Física</h1>
-          <p> Triangulo </p>
-          <section class="operation-Triangulo">
+          <p> Triangulo</p>
+          <section class="operation-container">
 
-            <label for="Lado-triangulo">Lados del triangulo</label>
-            <input type="text" id="lado-triangulo" placeholder="Ingrese el lado a del triangulo">
-            <div class="operation-Triangulo__resultado">
+            <label for="base-triangulo">Base Del Triangulo</label>
+            <input type="text" id="base-triangulo" placeholder="Ingrese una cantidad en centimetros">
+            <label for="Altura-triangulo">Altura Del Triangulo</label>
+            <input type="text" id="altura-triangulo" placeholder="Ingrese una cantidad en centimetros">
+            <div class="operation-container__resultado">
               <span>Resultado</span>
-              <p id="resultado"></p>
+              <p id="resultado-triangulo"></p>
               
             </div>
 
           </section>
         </main>
-          <section class="button-Triangulo">
-            <button class="button-triangulo__payment" type="button" onclick="calcularAreaTriangulo()" >Calcular el área</button>
-            <button class="button-triangulo__payment">Calcular el perimetro</button>
+          <section class="button-container">
+            <button class="button-container__payment" type="button" onclick="calcularAreaTriangulo()" >Calcular el área</button>
+            <button class="button-container__payment" type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
             <a href="/">
               <button class="button-container__cancel">Cancelar</button>
             </a>

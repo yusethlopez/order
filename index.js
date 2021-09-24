@@ -7,12 +7,23 @@ var calcularAreaCuadrado = () => {
     const resultado = areaDelCuadrado(ladoDelCuadrado)
     document.querySelector("#resultado").innerHTML = resultado
 }
-var Pi =Math.PI;
-const perimetroDelCirculo =(Radio)=> 2 * Pi *Radio;
-const areaDelCirculo =(Radio) => Pi*Radio^2;
-
-var CalcularAreaCirculo = () =>{
-    const Radio = document.querySelector("#Radio").value;
-    const resultado = areaDelCirculo(Radio)
-    document.querySelector("#resultado").innerHTML = resultado
+const perimetroDelCirculo = (radioDelCirculo) => {
+    const PI = Math.PI ;
+    const perimetroDelCirculo =  Math.round(radioDelCirculo*2*PI*100)/100;
+    return perimetroDelCirculo
 }
+const areaDelCirculo = (radioDelCirculo) =>{
+    const PI = Math.PI ;
+    radioDelCirculo =  Math.round(Math.pow(radioDelCirculo,2) * PI*100)/100;
+    return radioDelCirculo
+}
+var calcularAreaCirculo = () => {
+
+    const radioDelCirculo = document.querySelector("#radio-circulo").value;
+    const resultado = areaDelCirculo(radioDelCirculo)
+    document.querySelector("#resultado-circulo").innerHTML = resultado
+}
+var calcularPerimetroCirculo= () =>{
+    const radioDelCirculo = document.querySelector("#radio-circulo").value;
+    const resultado = perimetroDelCirculo(radioDelCirculo)
+    document.querySelector("#resultado-circulo").innerHTML = resultado
